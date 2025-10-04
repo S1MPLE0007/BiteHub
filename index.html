@@ -39,8 +39,8 @@
             <div class="socials">
                 <a href="" title="Facebook Profile"><i class="fa-brands fa-square-facebook"></i></a>
                 <a href="" title="Instagram Profile"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="" title="Thread Profile"><i class="fa-brands fa-square-x-twitter"><i class="fa-brands fa-square-threads"></i></i></a>
-                <a href="" title="Tiktok Profile"></a>
+                <a href="" title="Twitter Profile"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="" title="Thread Profile"><i class="fa-brands fa-square-threads"></i></a>
             </div>
         </div>
 
@@ -48,31 +48,31 @@
         <div class="swiper">
             <div class="swiper-wrapper"> <!--Additional wrapper-->
                 <!--Slides-->
-                <div class="swiper-slide" data-swiper-autoplay="4000">
+                <div class="swiper-slide" data-swiper-autoplay="2000">
                     <div class="image_container">
                         <img src="assets/Bao_buns.png" alt="">
                         <img src="assets/Cookies_brownies.png" alt="">
                     </div>
                 </div>
-                <div class="swiper-slide" data-swiper-autoplay="4000">
+                <div class="swiper-slide" data-swiper-autoplay="2000">
                     <div class="image_container">
                         <img src="assets/Fries_diffToppings.png" alt="">
                         <img src="assets/Fruit_drizzle.png" alt="">
                     </div>
                 </div>
-                <div class="swiper-slide" data-swiper-autoplay="4000">
+                <div class="swiper-slide" data-swiper-autoplay="2000">
                     <div class="image_container">
                         <img src="assets/Mini_tacos.png" alt="">
                         <img src="assets/Springrolls_dumplings.png" alt="">
                     </div>
                 </div>
-                <div class="swiper-slide" data-swiper-autoplay="4000">
+                <div class="swiper-slide" data-swiper-autoplay="2000">
                     <div class="image_container">
                         <img src="assets/Sushi_roles.png" alt="">
                         <img src="assets/Waffle_bites.png" alt="">
                     </div>
                 </div>
-                ....
+                
             </div>
 
             <!--If you need pagination-->
@@ -80,12 +80,11 @@
         </div>
     </section>
 
-    <script>
+    <script type="module">
         import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-
         const swiper = new Swiper(".swiper", {
             //Optional parameters
-            direction: horizontal,
+            direction: "horizontal",
             loop: true,
 
             //speed

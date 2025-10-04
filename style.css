@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --primary-color: #D13F2F;
+    --secondary-color: #1A1A2E;
+    --tertiary-color: #06D6A0;
+    --text-color: #2D2D2D;
+    --bg-color: #FFF8E7;
+    --max-width: 1200px;
+    --swiper-pagination-color: #609966;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-color);
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+}
+
+.nav_logo img {
+    height: 10rem;
+    width: auto;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.link a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.link a:hover {
+    background: var(--primary-color);
+    transition: 0.5s;
+    border-radius: 6px;
+    color: var(--bg-color);
+}
+
+.link #nav_btn {
+    padding: 0.5rem 2rem;
+    color: var(--bg-color) !important;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+}
+
+.link #nav_btn:hover {
+    background-color: #b01504;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    min-height: calc(100vh - 100px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.heading_1 {
+    font-weight: 700;
+}
+
+.heading_2 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.btn-readMore {
+    width: 20rem;
+    padding: 0.4rem;
+    background-color: #FF6F91;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between; /* spread evenly from start to end */
+    align-items: center;
+    margin-top: 12px;   /* slight spacing below the button */
+    width: 100%;        /* take full width of parent */
+    max-width: 300px;   /* match button width */ 
+}
+
+
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: transparent;
+    background-color: #B23A48;
+    font-size: 30px;
+    color: var(--bg-color);
+}
+
+.image_container {
+    flex: 1;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    position: relative;
+}
+
+.image_container img {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    border-radius: 10px;
+    border: var(--swiper-pagination-color) 4px solid;
+}
+
+.image_container img:nth-child(1) {
+    transform: translateY(70px);
+}
+
+.image_container img:nth-child(1) {
+    transform: translateY(-70px);
+}
+
+@media only screen and (width < 900px){
+    section, nav{
+        max-width: 90%;
+    }
+    .link a:not(#nav__btn){
+        display: none;
+    }
+
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content__container{
+        text-align: center;
+    }
+    .content__container form{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* .image__container{
+        grid-area: 1/1/2/2;
+    } */
+
+    .image__container img{
+        transform: translateY(0) !important;
+    }
+}
+
+.swiper{
+    width: 100%;
+}
+
+.swiper-slide{
+    display: flex !important;
+}
